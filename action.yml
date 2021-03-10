@@ -9,5 +9,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ./unix.sh ${{ inputs.pashmak-version }}
+    - run: ${{ github.action_path }}/unix.sh ${{ inputs.pashmak-version }}
       shell: bash
