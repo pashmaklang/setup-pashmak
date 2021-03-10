@@ -1,0 +1,28 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Set up Pashmak
+      uses: pashmaklang/setup-pashmak@master
+      with:
+        pashmak-version: 0.8.1
+    - name: Running Tests
+      run: |
+        pashmak test.pashm
+
+    name: Test
