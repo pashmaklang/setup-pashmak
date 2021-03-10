@@ -9,5 +9,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/unix.sh ${{ inputs.pashmak-version }}
+    - run: |
+        if [ "$RUNNER_OS" == "Windows" ]; then
+          ${{ github.action_path }}/windows.sh ${{ inputs.pashmak-version }}
+        else
+          ${{ github.action_path }}/unix.sh ${{ inputs.pashmak-version }}
+        fi
       shell: bash
