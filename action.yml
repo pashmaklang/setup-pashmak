@@ -6,18 +6,8 @@ inputs:
     description: 'Version of Pashmak that you want to install'
     required: true
 
-  python-version:
-    description: 'Version of Python that you want to install'
-    required: true
-    default: 3.9
-
 runs:
   using: "composite"
   steps:
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ inputs.python-version }}
-
     - run: ./unix.sh ${{ inputs.pashmak-version }}
       shell: bash
