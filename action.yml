@@ -20,9 +20,4 @@ runs:
         python-version: ${{ inputs.python-version }}
 
     - run: ./unix.sh ${{ inputs.pashmak-version }}
-      if: startsWith(matrix.os, 'windows') == false
-      shell: bash
-
-    - run: ./unix.sh ${{ inputs.pashmak-version }}
-      if: startsWith(matrix.os, 'windows') == true
       shell: bash
