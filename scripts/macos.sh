@@ -11,7 +11,7 @@ cd pashmak
 
 # compile and install
 make
-make install
+cp ./dist/pashmak /bin/pashmak
 
 # show the installed interpreter info
 pashmak --info
