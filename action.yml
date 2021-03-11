@@ -15,7 +15,7 @@ runs:
         elif [ "$RUNNER_OS" == "macOS" ]; then
           sudo ${{ github.action_path }}/scripts/macos.sh ${{ inputs.pashmak-version }}
           cd pashmak
-          sudo cp ./dist/pashmak /usr/bin
+          sudo cp ./dist/pashmak /usr/local/bin
           pashmak --version
         elif [ "$RUNNER_OS" == "Windows" ]; then
           ${{ github.action_path }}/scripts/windows.sh ${{ inputs.pashmak-version }}
