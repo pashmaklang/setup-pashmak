@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# setup the python
 brew install python
 
 # install the pyinstaller

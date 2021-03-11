@@ -20,6 +20,7 @@ runs:
           git checkout -b installation v${{ inputs.pashmak-version }}
           python -m pip install pyinstaller
           python -m PyInstaller src/pashmak.py
-          ./dist/pashmak.exe --info
+          ls dist
+          .\dist\pashmak.exe --info
         fi
       shell: bash
