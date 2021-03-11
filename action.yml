@@ -18,10 +18,9 @@ runs:
           sudo cp ./dist/pashmak /usr/local/bin
           pashmak --info
         elif [ "$RUNNER_OS" == "Windows" ]; then
-          wget https://github.com/pashmaklang/pashmak/archive/v${{ inputs.pashmak-version }}.zip -O pashmak.zip
-          unzip pashmak.zip
-          mv pashmak-* pashmak
+          git clone https://github.com/pashmaklang/pashmak.git
           cd pashmak
+          git checkout -b installation v${{ inputs.pashmak-version }}
           python -m pip install pyinstaller
           python -m PyInstaller src/pashmak.py
           ./dist/pashmak.exe --info
