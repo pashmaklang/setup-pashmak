@@ -19,8 +19,8 @@ runs:
           cd pashmak
           git checkout -b installation v${{ inputs.pashmak-version }}
           python -m pip install pyinstaller
-          python -m PyInstaller src/pashmak.py
-          mv dist/pashmak dist/pashmak.exe
+          python -m PyInstaller src/pashmak.py --onefile
+          ls dist
           ./dist/pashmak.exe --info
         fi
       shell: bash
