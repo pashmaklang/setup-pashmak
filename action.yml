@@ -22,7 +22,8 @@ runs:
           python -m PyInstaller src/pashmak.py --onefile
           mkdir C:/Pashmak
           cp ./dist/pashmak.exe C:/Pashmak
-          echo "C:/Pashmak" >> $GITHUB_PATH
+          setx PATH "$PATH;C:/Pashmak"
+          set PATH="$PATH;C:/Pashmak"
           pashmak.exe --info
           pashmak --info
         fi
