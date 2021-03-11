@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# setup python
+apt-get update
+apt-get install python3 python3-setuptools python3-pip -y
+
 # install the pyinstaller
 python3 -m pip install pyinstaller
 
