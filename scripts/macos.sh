@@ -11,7 +11,8 @@ cd pashmak
 
 # compile and install
 make
-cp ./dist/pashmak /bin/pashmak
+mkdir -p /Users/runner/.local/bin
+cp ./dist/pashmak /Users/runner/.local/bin
 
 # show the installed interpreter info
 pashmak --info
