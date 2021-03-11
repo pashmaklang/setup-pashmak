@@ -1,7 +1,9 @@
 #!/bin/sh
 
+brew install python
+
 # install the pyinstaller
-pip install pyinstaller
+python3 -m pip install pyinstaller
 
 # download the pashmak
 wget https://github.com/pashmaklang/pashmak/archive/v$1.zip -O pashmak.zip
@@ -11,8 +13,7 @@ cd pashmak
 
 # compile and install
 make
-mkdir -p /Users/runner/.local/bin
-cp ./dist/pashmak /Users/runner/.local/bin
+make install
 
 # show the installed interpreter info
 pashmak --info
