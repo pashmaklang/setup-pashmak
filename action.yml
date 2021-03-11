@@ -22,7 +22,7 @@ runs:
           python -m PyInstaller src/pashmak.py --onefile
           mkdir C:/Program\ Files/Pashmak
           cp ./dist/pashmak.exe C:/Program\ Files/Pashmak
-          echo %path%
+          echo $path
           setx path "%path%;C:\\Program Files\\Pashmak"
           C:/Program\ Files/Pashmak/pashmak.exe --info
           pashmak.exe --info
