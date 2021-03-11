@@ -11,9 +11,9 @@ runs:
   steps:
     - run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
-          ${{ github.action_path }}/linux.sh ${{ inputs.pashmak-version }}
+          sudo ${{ github.action_path }}/linux.sh ${{ inputs.pashmak-version }}
         elif [ "$RUNNER_OS" == "macOS" ]; then
-          ${{ github.action_path }}/macos.sh ${{ inputs.pashmak-version }}
+          sudo ${{ github.action_path }}/macos.sh ${{ inputs.pashmak-version }}
         elif [ "$RUNNER_OS" == "Windows" ]; then
           ${{ github.action_path }}/windows.sh ${{ inputs.pashmak-version }}
         fi
