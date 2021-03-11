@@ -20,11 +20,10 @@ runs:
           git checkout -b installation v${{ inputs.pashmak-version }}
           python -m pip install pyinstaller
           python -m PyInstaller src/pashmak.py --onefile
-          mkdir C:/Program\ Files/Pashmak
-          cp ./dist/pashmak.exe C:/Program\ Files/Pashmak
-          echo $path
-          setx path "%path%;C:\\Program Files\\Pashmak"
-          C:/Program\ Files/Pashmak/pashmak.exe --info
+          mkdir C:/Pashmak
+          cp ./dist/pashmak.exe C:/Pashmak
+          C:/Pashmak/pashmak.exe --info
+          echo "C:/Pashmak" >> $GITHUB_PATH
           pashmak.exe --info
         fi
       shell: bash
