@@ -13,7 +13,3 @@ cd pashmak
 
 # compile and install
 make
-make install
-
-# show the installed interpreter info
-pashmak --info
