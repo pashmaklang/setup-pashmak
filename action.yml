@@ -24,7 +24,7 @@ runs:
           cp ./dist/pashmak.exe C:/Pashmak
           setx PATH "$PATH;C:/Pashmak"
           set PATH="$PATH;C:/Pashmak"
-          pashmak.exe --info
           pashmak --info
+          pashmak.exe --info
         fi
       shell: bash
