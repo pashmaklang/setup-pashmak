@@ -16,4 +16,5 @@ runs:
           ${{ github.action_path }}/macos.sh ${{ inputs.pashmak-version }}
         elif [ "$RUNNER_OS" == "Windows" ]; then
           ${{ github.action_path }}/windows.sh ${{ inputs.pashmak-version }}
+        fi
       shell: bash
