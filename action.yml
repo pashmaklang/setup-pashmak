@@ -23,6 +23,7 @@ runs:
           mkdir C:/Program\ Files/Pashmak
           cp ./dist/pashmak.exe C:/Program\ Files/Pashmak
           setx path "%path%;C:\\Program Files\\Pashmak"
-          pashmak --info
+          C:/Program\ Files/Pashmak/pashmak.exe --info
+          pashmak.exe --info
         fi
       shell: bash
