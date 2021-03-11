@@ -11,7 +11,7 @@ cd pashmak
 
 # compile and install
 make
-sudo make install
+make install
 
 # show the installed interpreter info
 pashmak --info
