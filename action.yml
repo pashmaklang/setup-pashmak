@@ -18,6 +18,6 @@ runs:
           sudo cp ./dist/pashmak /usr/local/bin
           pashmak --version
         elif [ "$RUNNER_OS" == "Windows" ]; then
-          ${{ github.action_path }}\scripts\windows.sh ${{ inputs.pashmak-version }}
+          ${{ github.action_path }}\\scripts\\windows.sh ${{ inputs.pashmak-version }}
         fi
       shell: bash
