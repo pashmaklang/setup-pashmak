@@ -13,3 +13,5 @@ cd pashmak
 
 # compile and install
 make
+INSTALLATION_PATH=/usr/local/bin sudo make install
+pashmak --info

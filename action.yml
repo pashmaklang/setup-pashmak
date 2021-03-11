@@ -14,9 +14,6 @@ runs:
           sudo ${{ github.action_path }}/scripts/linux.sh ${{ inputs.pashmak-version }}
         elif [ "$RUNNER_OS" == "macOS" ]; then
           sudo ${{ github.action_path }}/scripts/macos.sh ${{ inputs.pashmak-version }}
-          cd pashmak
-          sudo cp ./dist/pashmak /usr/local/bin
-          pashmak --info
         elif [ "$RUNNER_OS" == "Windows" ]; then
           git clone https://github.com/pashmaklang/pashmak.git
           cd pashmak
