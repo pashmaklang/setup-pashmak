@@ -10,14 +10,10 @@ runs:
   using: "composite"
   steps:
     - run: |
-        ${{ github.action_path }}/linux.sh ${{ inputs.pashmak-version }}
-      if: runner.os == 'Linux'
-      shell: bash
-    - run: |
-        ${{ github.action_path }}/macos.sh ${{ inputs.pashmak-version }}
-      if: runner.os == 'macOS'
-      shell: bash
-    - run: |
-        ${{ github.action_path }}/windows.sh ${{ inputs.pashmak-version }}
-      if: runner.os == 'Windows'
+        if [ "$RUNNER_OS" == "Linux" ]; then
+          ${{ github.action_path }}/linux.sh ${{ inputs.pashmak-version }}
+        elif [ "$RUNNER_OS" == "macOS" ]; then
+          ${{ github.action_path }}/macos.sh ${{ inputs.pashmak-version }}
+        elif [ "$RUNNER_OS" == "Windows" ]; then
+          ${{ github.action_path }}/windows.sh ${{ inputs.pashmak-version }}
       shell: bash
