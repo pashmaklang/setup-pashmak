@@ -24,8 +24,8 @@ runs:
           cp ./dist/pashmak.exe %LocalAppData%/programs/Pashmak
 
           # TODO : add the C:/Pashmak to the windows path
-          setx PATH "$PATH;%LocalAppData%\programs\Pashmak"
-          set PATH="$PATH;%LocalAppData%\programs\Pashmak"
+          setx PATH "$PATH;%LocalAppData%/programs/Pashmak"
+          set PATH="$PATH;%LocalAppData%/programs/Pashmak"
           pashmak --info
         fi
       shell: bash
