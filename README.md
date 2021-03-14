@@ -23,7 +23,7 @@ jobs:
     # ...
 
     - name: Set up Pashmak
-      uses: pashmaklang/setup-pashmak@master
+      uses: pashmaklang/setup-pashmak@v1
       with:
         pashmak-version: 0.8.1
 
