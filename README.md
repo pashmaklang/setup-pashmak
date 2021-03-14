@@ -1,5 +1,4 @@
 # Pashmak programming language for GitHub Actions
-This project is in progress, do not use it now.
 
 ### Usage
 Create a file in `.github/workflows/my-workflow.yml` and write this content:
