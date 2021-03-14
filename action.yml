@@ -20,13 +20,11 @@ runs:
           git checkout -b installation v${{ inputs.pashmak-version }}
           python -m pip install pyinstaller
           python -m PyInstaller src/pashmak.py --onefile
-          which python
-          mkdir $LocalAppData/programs/Pashmak
-          cp ./dist/pashmak.exe $LocalAppData/programs/Pashmak
+
+          cp ./dist/pashmak.exe "$(dirname $(which python))"
 
           # TODO : add the C:/Pashmak to the windows path
-          setx PATH "$PATH;$LocalAppData/programs/Pashmak"
-          set PATH="$PATH;$LocalAppData/programs/Pashmak"
+
           pashmak --info
         fi
       shell: bash
