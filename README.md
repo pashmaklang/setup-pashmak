@@ -47,4 +47,4 @@ You should set `pashmak-version` argument to the version of Pashmak that you wan
 - `ubuntu-18.04`
 - `ubuntu-20.04`
 - `macos-latest`
-- `windows-latest` (not now)
+- `windows-latest`
