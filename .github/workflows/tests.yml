@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Pashmak
-      uses: pashmaklang/setup-pashmak@master
+      uses: ${{ github.repository }}@master
       with:
         pashmak-version: 0.8.1
     - name: Running Tests
